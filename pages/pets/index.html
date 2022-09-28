@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <title>Pets</title>
+  </head>
+  <body>
+    <header id="start">
+      <div class="wrapper">
+        <a href="../main/index.html" class="shelter__logo">
+          <div class="logo__title">Cozy House</div>
+          <div class="log__subtitle">Shelter for pets in Boston</div>
+        </a>
+
+        <div class="burger__button">
+          <input id="burger" type="checkbox" onclick="disableBody()" />
+
+          <label for="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <nav class="burger__nav animate_top">
+            <ul class="burger__list">
+              <li>
+                <a class="nav__link paragraph-l" href="../main/index.html"
+                  >About the shelter</a
+                >
+              </li>
+              <li>
+                <a class="active__link nav__link paragraph-l" href="#start"
+                  >Our pets</a
+                >
+              </li>
+              <li>
+                <a class="nav__link paragraph-l" href="#">Help the shelter</a>
+              </li>
+              <li><a class="nav__link paragraph-l" href="#">Contacts</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <nav class="header__nav">
+          <ul>
+            <li>
+              <a class="nav__link paragraph-l" href="../main/index.html"
+                >About the shelter</a
+              >
+            </li>
+            <li>
+              <a class="active__link nav__link paragraph-l" href="#start"
+                >Our pets</a
+              >
+            </li>
+            <li>
+              <a class="nav__link paragraph-l help__shelter" href="#"
+                >Help the shelter</a
+              >
+            </li>
+            <li><a class="nav__link paragraph-l" href="#">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="pets__section">
+        <div class="wrapper">
+          <div class="section__content__wrapper">
+            <h3>
+              <span style="margin-left: 30px; margin-right: 30px"
+                >Our friends who</span
+              >
+              <span>are looking for a house</span>
+            </h3>
+
+            <div class="slider__container">
+              <div class="slider__panel">
+                <!-- <div class="card">
+                                <img src="../../assets/images/pets-katrine.png" alt="">
+                                <p class="pets__card__title">Katrine</p>
+                                <button class="btn__secondary">Learn more</button>
+                            </div> -->
+              </div>
+
+              <!-- The Modal -->
+
+              <div class="slider__controls">
+                <button
+                  class="slider__control prev__buttons"
+                  onclick="moveToEnd('prev')"
+                ></button>
+
+                <button
+                  class="slider__control prev__buttons"
+                  onclick="moveToOne('prev')"
+                ></button>
+
+                <button class="slider__control paginator" disabled>
+                  <span id="page__count" style="color: black" disabled>1</span>
+                </button>
+
+                <button
+                  class="slider__control next__buttons"
+                  onclick="moveToOne('next')"
+                >
+                  >
+                </button>
+
+                <button
+                  class="slider__control next__buttons"
+                  onclick="moveToEnd('next')"
+                >
+                  >>
+                </button>
+              </div>
+
+              <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <button class="close">&times;</button>
+
+                  <div class="modal-content-image">
+                    <img id="modal__pet" src="" alt="Modal Pet" />
+                  </div>
+
+                  <div class="modal-content-data">
+                    <h3 id="modal__pet__name"></h3>
+                    <h4 id="modal__type__breed">
+                      <span id="pet__type"></span> -
+                      <span id="pet__breed"></span>
+                    </h4>
+
+                    <h5 id="pet__description"></h5>
+
+                    <ul id="pet__more__info">
+                      <li><span>Age:</span><span id="modal__age"></span></li>
+                      <li>
+                        <span>Inoculations:</span
+                        ><span id="modal__inoculations"></span>
+                      </li>
+                      <li>
+                        <span>Diseases:</span><span id="modal__diseases"></span>
+                      </li>
+                      <li>
+                        <span>Parasites:</span
+                        ><span id="modal__parasites"></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrapper">
+        <div class="section__content__wrapper">
+          <div class="footer__sections">
+            <section class="footer__contacts__section">
+              <h3>For questions and suggestions</h3>
+              <a href="mailto:example@example.ru" class="footer__nav__link">
+                <img src="../../assets/icons/mail.svg" />
+                <h4>email@shelter.com</h4>
+              </a>
+              <a href="tel:+1234567890" class="footer__nav__link">
+                <img src="../../assets/icons/phone.svg" />
+                <h4>+13 674 567 75 54</h4>
+              </a>
+            </section>
+
+            <section class="footer__location__section">
+              <h3>We are waiting for your visit</h3>
+              <a
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=36.26577,-92.54324"
+                class="footer__nav__link"
+              >
+                <img src="../../assets/icons/pin.svg" />
+                <h4>1 Central Street, Boston (entrance from the store)</h4>
+              </a>
+              <a
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=36.26577,-92.54324"
+                class="footer__nav__link"
+              >
+                <img src="../../assets/icons/pin.svg" />
+                <h4>18 South Park, London</h4>
+              </a>
+            </section>
+          </div>
+
+          <div class="footer__image__wrapper">
+            <img
+              src="../../assets/images/footer-puppy.png"
+              alt="footer puppy"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+    <script src="../js/modal.js"></script>
+  </body>
+</html>
